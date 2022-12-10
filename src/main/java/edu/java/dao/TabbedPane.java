@@ -37,23 +37,18 @@ public class TabbedPane implements ActionListener{
     //jtabbedpane   
         jframe = new JFrame(); 
         jframe.setTitle("Gestion de Location de Voiture");
-        // JPanel mainpane = new JPanel();
-        // mainpane.setLayout(new GridLayout(1,1,0,0));
         jtabbedpane = new JTabbedPane(); 
         paneClient = new JPanel();
         paneVoiture = new JPanel();
         paneLocation = new JPanel();
         paneClient.setLayout(new BoxLayout(paneClient, BoxLayout.Y_AXIS));
-        // paneClient.setLayout(new BorderLayout());
 
         jtabbedpane.setBounds(0,0,800,600);  
-        // jtabbedpane.setPreferredSize(new Dimension(800,600));
 
-        jtabbedpane.add("Gestion de Client", paneClient);  
-        jtabbedpane.add("Gestion de Voiture", paneVoiture);  
-        jtabbedpane.add("Gestion de Location", paneLocation);    
-
-        // mainpane.add(jtabbedpane);
+        jtabbedpane.add("Gestion des Clients", paneClient);  
+        jtabbedpane.add("Gestion des Voitures", paneVoiture);  
+        jtabbedpane.add("Gestion des Locations", paneLocation);    
+        
         jframe.add(jtabbedpane);  
         jframe.setSize(800,600); 
         jframe.setLocationRelativeTo(null);
@@ -267,6 +262,12 @@ public class TabbedPane implements ActionListener{
                 JOptionPane.showMessageDialog(null, message, "Info", JOptionPane.INFORMATION_MESSAGE);
             }
         }
-
+        else if(evt.getSource() == b6){
+            field1.setText("");
+            field2.setText("");
+            field3.setText("");
+            field4.setText("");
+            field5.setText("");
+        }
     }
 }
